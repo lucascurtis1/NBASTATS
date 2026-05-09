@@ -14,4 +14,4 @@
 - 3pt_Playoff_Plot_21_22.pdf -> Sample Plot Output
 
 # Note
-- This is my first instance of utilizing git, I am sure this repository is not perfectly set up
+- This is my first instance of utilizing git, I apologize if this repository is not pretty
