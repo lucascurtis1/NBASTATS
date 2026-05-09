@@ -12,3 +12,6 @@
 - MyOwnNBAProj.sas -> Actual Code Work
 - nbaplayoffs2022.csv -> Data (acquired from basketball reference)
 - 3pt_Playoff_Plot_21_22.pdf -> Sample Plot Output
+
+# Note
+- This is my first instance of utilizing git, I am sure this repository is not perfectly set up
