@@ -1,6 +1,12 @@
 # NBA Statistical analysis and data visualization in SAS and Python
 
-## In the SAS portion, I made visualizations for each nba position {pg,sg,sf,pf,c} on their 3 point shooting metrics by team. Then, I used the aggregated SAS datasets and read them into Python, where I created a custom point value that synthesizes statistics and puts a single number to the success in three point shooting by team, by year.
+## SAS PORTION
+- Aggregated indivual player stats into team stats
+- Compared teams position-by-position with Data Visualization
+
+## Python PORTION
+- Manipulated dataframes and dictionaries in order to cleanly access SAS data
+- Assigned custom point values as a metric for 3pt success
 
 ## SKILLS USED, SAS
 - PROC SUMMARY
