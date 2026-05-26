@@ -1,4 +1,4 @@
-# NBA Statistical analysis and data visualization in SAS and Python
+# NBA Statistical Analysis and Data Visualization in SAS and Python (in progress)
 
 ## SAS PORTION
 - Aggregated indivual player stats into team stats
