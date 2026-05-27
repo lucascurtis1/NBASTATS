@@ -16,6 +16,7 @@
 ## FILES
 - NBA_Season_Stats -> Folder containing nba data (acquired from basketball reference)
 - SAS_Datasets_NBA3PT -> downloaded sas7bdat datasets
-- MyOwnNBAProj.sas -> SAS code
+- NBAPROJplayoffs -> SAS code for playoffs
+- NBAPROJregular -> SAS code for regular season
 - NBAStats.py -> Python code
-- 3pt_Playoff_Plot_21_22.pdf -> Sample SAS Plot Output
+- 3pt_Playoff_Plot_21_22.pdf -> Sample of what SAS visuals look like

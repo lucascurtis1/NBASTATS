@@ -48,7 +48,7 @@ def Centers(dataset_i):
         LA_Pct = .360
     data2 = data.assign(
         Over_LA_Pct = data['Percentage'] > LA_Pct,
-        Over_3PM_Std = data['Made'] > 1.5
+        Over_3PM_Std = data['Made_Per_Game'] > 1.5
         )
     With_Point_Values = data2.assign(
         Point_Value = data2['Over_LA_Pct'].astype(int) + data2['Over_3PM_Std'].astype(int)
@@ -73,7 +73,7 @@ def PgSgSf(dataset_i):
         LA_Pct = .360
     data2 = data.assign(
         Over_LA_Pct = data['Percentage'] > LA_Pct,
-        Over_3PM_Std = data['Made'] > 4.5
+        Over_3PM_Std = data['Made_Per_Game'] > 4.5
         )
     With_Point_Values = data2.assign(
         Point_Value = data2['Over_LA_Pct'].astype(int) + data2['Over_3PM_Std'].astype(int)
@@ -98,7 +98,7 @@ def PowerForwards(dataset_i):
         LA_Pct = .360
     data2 = data.assign(
         Over_LA_Pct = data['Percentage'] > LA_Pct,
-        Over_3PM_Std = data['Made'] > 3.5
+        Over_3PM_Std = data['Made_Per_Game'] > 3.5
         )
     With_Point_Values = data2.assign(
         Point_Value = data2['Over_LA_Pct'].astype(int) + data2['Over_3PM_Std'].astype(int)
@@ -160,7 +160,7 @@ for key, value in dataframes_by_year.items():
         Series_of_PV_dict[key].append(PV_only_series)
 
 Point_Value_Dictionary = {}
-for key, value in Series_of_PV_dict.items():
+for key, serieslist in Series_of_PV_dict.items():
     """
     This now gives a dictionary (Point_Value_Dictionary) with {year : series containing point value at each team (the index being team) }
     example:
@@ -184,7 +184,7 @@ for key, value in Series_of_PV_dict.items():
                 Name: Point_Value, dtype: float64
         }
     """
-    Point_Value_Dictionary[key] = sum(value).fillna(0)
+    Point_Value_Dictionary[key] = pd.concat(objs=serieslist, axis=1).fillna(0).sum(axis=1)
         
 
 
